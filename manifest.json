@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "instapaper-lite",
+	"version": "0.1.0",
+
+	"author": "aecepoglu",
+	"description": "Sends pages to instapaper and does it better",
+	"homepage_url": "http://github.com/aecepoglu/firefox-instapaper-addon",
+	"icons": {
+		"48": "icons/logo.png"
+	},
+
+	"permissions": [
+		"activeTab",
+		"webRequest"
+	],
+
+	"browser_action": {
+		"browser_style": true,
+		"default_area": "navbar",
+		"default_icon": "icons/logo.png",
+		"default_title": "send to Instapaper"
+	},
+	"background": {
+		"scripts": ["code.js"]
+	}
+}
