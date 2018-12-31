@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "instapaper-lite",
+	"name": "Better Insta-Paper",
 	"version": "0.1.0",
 
 	"author": "aecepoglu",
@@ -12,14 +12,20 @@
 
 	"permissions": [
 		"activeTab",
-		"webRequest"
+		"storage"
 	],
 
-	"browser_action": {
-		"browser_style": true,
-		"default_area": "navbar",
+	"options_ui": {
+		"page": "options/view.html",
+		"browser_style": true
+	},
+
+	"page_action": {
 		"default_icon": "icons/logo.png",
-		"default_title": "send to Instapaper"
+		"default_title": "send to Instapaper",
+		"default_popup": "popup/view.html",
+		"browser_style": true,
+		"show_matches": ["<all_urls>"]
 	},
 	"background": {
 		"scripts": ["code.js"]

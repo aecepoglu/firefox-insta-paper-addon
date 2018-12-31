@@ -1,7 +1,7 @@
-const handleClick = () => {
-	console.log("handleClick")
+const handleClick = tab => {
+	console.log("handleClick tab.url:", tab.url)
 }
 
-browser.browserAction.onClicked.addListener(handleClick)
+browser.pageAction.onClicked.addListener(handleClick)
 
 console.log("plugin init.")
